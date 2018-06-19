@@ -1,0 +1,13 @@
+vpnserver:
+  image: siomiz/softethervpn
+  restart: always
+  cap_add:
+    - NET_ADMIN
+  ports:
+    - 500:500/udp
+    - 4500:4500/udp
+    - 1701:1701/tcp
+  environment:
+    - PSK=LynnWang
+    - USERNAME=caoyin
+    - PASSWORD=caoyinvpn

@@ -1,0 +1,21 @@
+version: "2"
+services:
+  web:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab-ce
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://caoyin.org:9090'
+        gitlab_rails['gitlab_shell_ssh_port'] = 22224
+    ports:
+      - 9090:9090
+      - "22224:22"
+    volumes:
+      - config:/etc/gitlab
+      - logs:/var/log/gitlab
+      - data:/var/opt/gitlab
+
+volumes:
+  config:
+  logs:
+  data:

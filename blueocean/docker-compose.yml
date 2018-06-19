@@ -1,0 +1,7 @@
+version: "2"
+services:
+  blueocean:
+    container_name: blueocean
+    image: jenkinsci/blueocean:latest
+    ports:
+      - 8888:8080

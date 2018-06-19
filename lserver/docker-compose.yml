@@ -1,0 +1,7 @@
+version: "2"
+services:
+  lserver:
+    image: caoyin0727/lserver
+    network_mode: bridge
+    ports:
+      - 46143:1017

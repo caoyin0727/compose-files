@@ -1,0 +1,9 @@
+nginx:
+  container_name: httpd
+  image: nginx
+  restart: always
+  ports:
+    - 80:80
+  volumes:
+    - /var/www:/usr/share/nginx/html:ro
+    - ./default.conf:/etc/nginx/conf.d/default.conf

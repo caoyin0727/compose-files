@@ -1,0 +1,11 @@
+version: "2"
+services:
+  server:
+    image: mritd/shadowsocks:3.0.7
+    network_mode: bridge
+    ports:
+      - "6443:6443"
+      - "6500:6500/udp"
+    environment:
+      - SS_MODULE=ss-server
+      - "SS_CONFIG=-s :: -s 0.0.0.0 -p 6443 -m aes-256-cfb -k LynnWang1219 --fast-open"
